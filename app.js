@@ -6,7 +6,7 @@ const rateLimit = require('express-rate-limit');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const csp = require('express-csp');
-
+const compression = require('compression');
 const mongoSanitize = require('express-mongo-sanitize');
 
 const xss = require('xss-clean');
@@ -89,7 +89,7 @@ csp.extend(app, {
         'unsafe-inline',
         'data:',
         'blob:',
-        // 'wss://<HEROKU-SUBDOMAIN>.herokuapp.com:<PORT>/',
+        'wss://natours-yatra4.onrender.com:56341/',
         'https://*.stripe.com',
         'https://*.mapbox.com',
         'https://*.cloudflare.com/',
@@ -142,7 +142,7 @@ app.use(
   })
 );
 
-
+app.use(compression());
 
 //Test Middleware
 app.use((req, res, next) => {
