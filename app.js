@@ -1,7 +1,7 @@
 const morgan = require('morgan');
 const path = require('path');
 const express = require('express');
-// const cors = require('cors');
+const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
@@ -140,12 +140,12 @@ app.use(
 //   },
 // });
 
-// app.use(
-//   cors({
-//     credentials: true,
-//     origin: 'http://localhost:3000'
-//   })
-// );
+app.use(
+  cors({
+    credentials: true,
+    origin: 'https://natours-yatra4.onrender.com' // Replace with your frontend's domain
+  })
+);
 
 //development logging
 if (process.env.NODE_ENV === 'development') {
