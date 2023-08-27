@@ -152,7 +152,7 @@ app.use((req, res, next) => {
 });
 
 //2) ROUTE HANDLERS
-
+// trying smth here
 //3) ROUTES
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
