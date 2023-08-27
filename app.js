@@ -89,7 +89,7 @@ csp.extend(app, {
         'unsafe-inline',
         'data:',
         'blob:',
-        'wss://natours-yatra4.onrender.com:56341/',
+        // 'wss://natours-yatra4.onrender.com:56341/',
         'https://*.stripe.com',
         'https://*.mapbox.com',
         'https://*.cloudflare.com/',
